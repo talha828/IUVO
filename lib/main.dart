@@ -1,7 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iuvo/view/splash_screen.dart';
+import 'package:iuvo/view/get_start_screen/build_your_community_screen.dart';
+import 'package:iuvo/view/get_start_screen/report_your_issue_screen.dart';
+import 'package:iuvo/view/splash_screen/splash_screen.dart';
+
 
 void main()async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: createMaterialColor(const Color(0xff404258)),
       ),
-      home: const SplashScreen(),
+      home:const  SplashScreen(),
     );
   }
   MaterialColor createMaterialColor(Color color) {

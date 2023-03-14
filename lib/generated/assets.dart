@@ -2,8 +2,13 @@
 class Assets {
   Assets._();
 
+  static const String imageCommunity = 'assets/image/community.png';
+  static const String imageCrimeScene = 'assets/image/crime-scene.png';
+  static const String imageLogin = 'assets/image/login.png';
   static const String imageLogo = 'assets/image/logo.png';
   static const String imageProfile = 'assets/image/profile.png';
+  static const String imageReportCrime = 'assets/image/report_crime.png';
+  static const String imageShare = 'assets/image/share.png';
   static const String imageWalcome = 'assets/image/walcome.png';
 
 }

@@ -12,7 +12,8 @@ import 'package:iuvo/components/widget/iuvotextfield.dart';
 import 'package:iuvo/components/widget/loading_indicator.dart';
 import 'package:iuvo/firebase/auth.dart';
 import 'package:iuvo/generated/assets.dart';
-import 'package:iuvo/view/main_screen.dart';
+import 'package:iuvo/view/LoginScreen/loginScreen.dart';
+import 'package:iuvo/view/main_screen/main_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:validation_plus/validate.dart';
 
@@ -194,7 +195,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           style: TextStyle(color: Colors.grey),
                         ),
                         InkWell(
-                          onTap: () => Get.to(const MainScreen()),
+                          onTap: () => Get.to(const LoginScreen()),
                           child: const Text(
                             " SignIn",
                             textAlign: TextAlign.right,
