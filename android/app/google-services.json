@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "282645490261",
+    "project_id": "iuvo-3580b",
+    "storage_bucket": "iuvo-3580b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:282645490261:android:1a748650a6a77a411e82dc",
+        "android_client_info": {
+          "package_name": "com.talhaiqbal.iuvo.iuvo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "282645490261-n77mcgsak3njfejpmn8tkq46ibthj6i2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBph252J4auaQxBq1elNcygAVFr6FpF1lk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "282645490261-n77mcgsak3njfejpmn8tkq46ibthj6i2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
