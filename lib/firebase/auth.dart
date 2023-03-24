@@ -8,34 +8,33 @@ import 'package:iuvo/view/main_screen/main_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:validation_plus/validate.dart';
 
-
 class Auth {
   static signUp(
       {required String name,
-        required String email,
-        required String country,
-        required String password,
-        required String confirmPassword,
-        required File file,
-        required bool flag,
-        required double width,
-        var setLoading}) async {
-     if (flag == false) {
+      required String email,
+      required String country,
+      required String password,
+      required String confirmPassword,
+      required File file,
+      required bool flag,
+      required double width,
+      var setLoading}) async {
+    if (flag == false) {
       if (Validate.isValidEmail(email)) {
-         if (country != 'Select Your Country') {
+        if (country != 'Select Your Country') {
           if (Validate.isValidPassword(password)) {
             if (password == confirmPassword) {
               setLoading(true);
               FirebaseAuth auth = FirebaseAuth.instance;
               await auth
                   .createUserWithEmailAndPassword(
-                  email: email, password: password)
+                      email: email, password: password)
                   .then((value) async {
                 var database = FirebaseFirestore.instance.collection("users");
                 await database.doc().set({
                   "name": name,
                   "email": email,
-                   "country": country,
+                  "country": country,
                   "password": password,
                   "image": Blob(file.readAsBytesSync()),
                 }).then((value) async {
@@ -102,9 +101,9 @@ class Auth {
 
   static login(
       {required String email,
-        required String password,
-        var setLoading,
-        required double width}) {
+      required String password,
+      var setLoading,
+      required double width}) {
     if (Validate.isValidEmail(email)) {
       if (Validate.isValidPassword(password)) {
         setLoading(true);
@@ -116,7 +115,7 @@ class Auth {
           final prefs = await SharedPreferences.getInstance();
           prefs.setString("email", email);
           prefs.setString("password", password);
-           Get.to(const MainScreen());
+          Get.to(const MainScreen());
         }).catchError((e) {
           setLoading(false);
           Get.snackbar("Login Failed", "Please check your email and password",

@@ -1,8 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:iuvo/view/get_start_screen/build_your_community_screen.dart';
 import 'package:iuvo/view/get_start_screen/report_your_issue_screen.dart';
+import 'package:iuvo/view/main_screen/main_screen.dart';
 import 'package:iuvo/view/splash_screen/splash_screen.dart';
 
 
@@ -20,8 +22,14 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData(
         primarySwatch: createMaterialColor(const Color(0xff404258)),
+          primaryTextTheme: GoogleFonts.latoTextTheme(
+              Theme.of(context).textTheme
+          ),
+          textTheme: GoogleFonts.latoTextTheme(
+              Theme.of(context).textTheme
+          )
       ),
-      home:const  SplashScreen(),
+      home:const  MainScreen(),
     );
   }
   MaterialColor createMaterialColor(Color color) {

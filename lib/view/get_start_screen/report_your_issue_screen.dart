@@ -6,6 +6,7 @@ import 'package:iuvo/view/get_start_screen/build_your_community_screen.dart';
 import 'package:iuvo/view/main_screen/main_screen.dart';
 
 class ReportYourIssueScreen extends StatefulWidget {
+  const ReportYourIssueScreen({Key? key}) : super(key: key);
   @override
   State<ReportYourIssueScreen> createState() => _ReportYourIssueScreenState();
 }

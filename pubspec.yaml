@@ -47,6 +47,7 @@ dependencies:
   cloud_firestore: ^4.4.2
   shared_preferences: ^2.0.17
   circular_clip_route: ^0.2.0+3
+  fluid_bottom_nav_bar: ^1.4.0
 
 dev_dependencies:
   flutter_test:
