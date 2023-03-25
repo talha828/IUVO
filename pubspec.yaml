@@ -49,6 +49,7 @@ dependencies:
   circular_clip_route: ^0.2.0+3
   fluid_bottom_nav_bar: ^1.4.0
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

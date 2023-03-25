@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:iuvo/components/constant/constant.dart';
 import 'package:iuvo/generated/assets.dart';
 
@@ -10,7 +11,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  bool like = true;
+  bool like1 = true;
+  bool like2 = true;
   bool follow1=false;
   bool follow2=false;
   @override
@@ -65,40 +67,52 @@ class _HomeScreenState extends State<HomeScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Row(
-                          children: [
-                            Image.asset(
-                              Assets.imagePicture,
-                              scale: 18,
-                            ),
-                            SizedBox(
-                              width: width * 0.04,
-                            ),
-                            Text(
-                              "Images",
-                              style: TextStyle(fontSize: width * 0.05),
-                            )
-                          ],
+                        InkWell(
+                          onTap: ()async{
+                            final ImagePicker _picker = ImagePicker();
+                            final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
+                          },
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                Assets.imagePicture,
+                                scale: 18,
+                              ),
+                              SizedBox(
+                                width: width * 0.04,
+                              ),
+                              Text(
+                                "Images",
+                                style: TextStyle(fontSize: width * 0.05),
+                              )
+                            ],
+                          ),
                         ),
                         SizedBox(
                             height: width * 0.08,
                             child: const VerticalDivider(
                               thickness: 1.5,
                             )),
-                        Row(
-                          children: [
-                            Image.asset(
-                              Assets.imageMultimedia,
-                              scale: 18,
-                            ),
-                            SizedBox(
-                              width: width * 0.04,
-                            ),
-                            Text(
-                              "Videos",
-                              style: TextStyle(fontSize: width * 0.05),
-                            )
-                          ],
+                        InkWell(
+                          onTap: ()async{
+                            final ImagePicker _picker = ImagePicker();
+                            final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
+                          },
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                Assets.imageMultimedia,
+                                scale: 18,
+                              ),
+                              SizedBox(
+                                width: width * 0.04,
+                              ),
+                              Text(
+                                "Videos",
+                                style: TextStyle(fontSize: width * 0.05),
+                              )
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -169,13 +183,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         InkWell(
                           onTap: () {
                             setState(() {
-                              like = !like;
+                              like1 = !like1;
                             });
                           },
                           child: Row(
                             children: [
                               Image.asset(
-                                like
+                                like1
                                     ? Assets.imageFillArrow
                                     : Assets.imageArrow,
                                 scale: 23,
@@ -193,7 +207,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         InkWell(
                           onTap: () {
                             setState(() {
-                              like = !like;
+                              like1 = !like1;
                             });
                           },
                           child: Row(
@@ -201,7 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               RotatedBox(
                                   quarterTurns: 90,
                                   child: Image.asset(
-                                    !like
+                                    !like1
                                         ? Assets.imageFillArrow
                                         : Assets.imageArrow,
                                     scale: 23,
@@ -301,13 +315,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         InkWell(
                           onTap: () {
                             setState(() {
-                              like = !like;
+                              like2 = !like2;
                             });
                           },
                           child: Row(
                             children: [
                               Image.asset(
-                                like
+                                like2
                                     ? Assets.imageFillArrow
                                     : Assets.imageArrow,
                                 scale: 23,
@@ -325,7 +339,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         InkWell(
                           onTap: () {
                             setState(() {
-                              like = !like;
+                              like2 = !like2;
                             });
                           },
                           child: Row(
@@ -333,7 +347,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               RotatedBox(
                                   quarterTurns: 90,
                                   child: Image.asset(
-                                    !like
+                                    !like2
                                         ? Assets.imageFillArrow
                                         : Assets.imageArrow,
                                     scale: 23,

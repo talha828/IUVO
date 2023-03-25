@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
     if (email.toString() != "null" && password.toString() != "null") {
       Get.to(const MainScreen());
     } else {
-      Get.to(const ReportYourIssueScreen());
+      Timer(Duration(seconds: 2),()=>Get.to(const ReportYourIssueScreen()));
     }
   }
 

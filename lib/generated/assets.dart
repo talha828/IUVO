@@ -11,6 +11,7 @@ class Assets {
   static const String imageDefamation = 'assets/image/defamation.jpg';
   static const String imageDrugs = 'assets/image/drugs.jpeg';
   static const String imageFillArrow = 'assets/image/fill-arrow.png';
+  static const String imageGpt = 'assets/image/gpt.png';
   static const String imageHarassment = 'assets/image/harassment.jpg';
   static const String imageJustices = 'assets/image/justices.png';
   static const String imageLogin = 'assets/image/login.png';
@@ -23,6 +24,7 @@ class Assets {
   static const String imageProtest = 'assets/image/protest.jpg';
   static const String imageReportCrime = 'assets/image/report_crime.png';
   static const String imageShare = 'assets/image/share.png';
+  static const String imageUpload = 'assets/image/upload.png';
   static const String imageWalcome = 'assets/image/walcome.png';
 
 }
