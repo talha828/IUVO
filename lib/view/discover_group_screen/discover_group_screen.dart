@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iuvo/components/constant/constant.dart';
 import 'package:iuvo/generated/assets.dart';
+import 'package:iuvo/view/chat_room_screen/chat_room_screen.dart';
+import 'package:iuvo/view/group_chat_screen/group_chat_screen.dart';
 
 class DiscoverGroupScreen extends StatefulWidget {
   const DiscoverGroupScreen({Key? key}) : super(key: key);
@@ -73,43 +76,48 @@ class _DiscoverGroupScreenState extends State<DiscoverGroupScreen> {
                   crossAxisSpacing: width * 0.04,
                   children: element
                       .map(
-                        (e) => Stack(
-                          alignment: Alignment.bottomLeft,
-                          children: [
+                        (e) => InkWell(
+                          onTap: (){
+                            Get.to(const GroupChatRoomScreen());
+                          },
+                          child: Stack(
+                            alignment: Alignment.bottomLeft,
+                            children: [
 
-                            Container(
-                              height: width * 0.5,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(
-                                  image: AssetImage(e.image),
-                                  fit: BoxFit.cover,
+                              Container(
+                                height: width * 0.5,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  image: DecorationImage(
+                                    image: AssetImage(e.image),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  //color: Colors.blueAccent,
                                 ),
-                                //color: Colors.blueAccent,
-                              ),
-                              child: OverflowBox(
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    gradient:const LinearGradient(
-                                        begin: Alignment.bottomLeft,
-                                        end: Alignment.topRight,
-                                        colors: [
-                                          Color(0xFF000000),
-                                          Color(0x2d2d2d00)
-                                        ]
+                                child: OverflowBox(
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      gradient:const LinearGradient(
+                                          begin: Alignment.bottomLeft,
+                                          end: Alignment.topRight,
+                                          colors: [
+                                            Color(0xFF000000),
+                                            Color(0x2d2d2d00)
+                                          ]
+                                      ),
                                     ),
                                   ),
                                 ),
                               ),
-                            ),
-                            ListTile(
-                              dense: true,
-                              leading: CircleAvatar(radius: width * 0.05, child: Image.asset(Assets.imageAvater)),
-                              title: Text(e.name,style: TextStyle(color: Colors.white),),
-                              subtitle: Text(e.groupMember,style: TextStyle(color: Colors.white),),
-                            )
-                          ],
+                              ListTile(
+                                dense: true,
+                                leading: CircleAvatar(radius: width * 0.05, child: Image.asset(Assets.imageAvater)),
+                                title: Text(e.name,style: TextStyle(color: Colors.white),),
+                                subtitle: Text(e.groupMember,style: TextStyle(color: Colors.white),),
+                              )
+                            ],
+                          ),
                         ),
                       )
                       .toList(),

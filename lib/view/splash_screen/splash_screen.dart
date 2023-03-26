@@ -28,8 +28,8 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   @override
-  void initState() {
-    getLogin();
+  void initState() {getLogin();
+
     super.initState();
   }
 
@@ -39,8 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
       child: Scaffold(
         body: Center(
           child: Image.asset(
-            Assets.imageCrimeScene,
-            scale: 3,
+            Assets.imageLogo,
           ),
         ),
       ),
