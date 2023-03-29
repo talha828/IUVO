@@ -39,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
       child: Scaffold(
         body: Center(
           child: Image.asset(
-            Assets.imageLogo,
+              'assets/gif/iUVo.gif'
           ),
         ),
       ),

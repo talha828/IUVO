@@ -14,8 +14,9 @@ class CreateNewReportScreen extends StatefulWidget {
 }
 
 class _CreateNewReportScreenState extends State<CreateNewReportScreen> {
-  TextEditingController controller=TextEditingController();
-  TextEditingController controller1=TextEditingController();
+  TextEditingController subject=TextEditingController();
+  TextEditingController country=TextEditingController();
+  TextEditingController description=TextEditingController();
   // Initial Selected Value
   String dropdownvalue = 'Robbery';
 
@@ -23,22 +24,24 @@ class _CreateNewReportScreenState extends State<CreateNewReportScreen> {
   var items = [
     "Robbery",
     "Harassment",
-    "Volition",
-    "Injustices",
-    "Murdered",
-    "Defamation "
+    "Violation",
+    "Injustice",
+    "Abuse",
+    "Defamation",
   ];
 
-  String dropdownvalue1 = 'Police';
+  String dropdownvalue1 = 'Police Officer';
 
   // List of items in our dropdown menu
   var items1 = [
-    "Police",
-    "Army",
-    "United Nation",
+    "Police Officer",
+    "Human Resources",
+    "Fire Truck",
+    "Child Protective Services",
+    "Law Firm",
   ];
 
-  String countryText = 'Select Your Country';
+  String countryText = 'Select Country';
 
   onChange(String? newValue) {
     setState(() {
@@ -56,7 +59,11 @@ class _CreateNewReportScreenState extends State<CreateNewReportScreen> {
           icon: const Icon(
             Icons.arrow_back_outlined,
           ),
-          onPressed: () {},
+          onPressed: () {
+
+            Navigator.pop(context);
+
+          },
         ),
       ),
       body: SingleChildScrollView(
@@ -99,7 +106,7 @@ class _CreateNewReportScreenState extends State<CreateNewReportScreen> {
                 SizedBox(height: width * 0.04,),
                 IuvoTextField(
                     obscureText: false,
-                    controller: controller,
+                    controller: subject,
                     hintText: "Bank Robbery",
                     labelText: "Subject Of Report"),
                 SizedBox(height: width * 0.04,),
@@ -119,13 +126,13 @@ class _CreateNewReportScreenState extends State<CreateNewReportScreen> {
                       child: IuvoTextField(
                         suffixIcon: Icon(Icons.location_on),
                           obscureText: false,
-                          controller: controller,
-                          hintText: "Talha Iqbal",
+                          controller: country,
+                          hintText: "iUVo Land",
                           labelText: countryText)),
                 ),
                 SizedBox(height: width * 0.04,),
                 TextField(
-                  controller: controller,
+                  controller: description,
                   maxLines: null,
                   decoration:const InputDecoration(
                       border:  OutlineInputBorder(

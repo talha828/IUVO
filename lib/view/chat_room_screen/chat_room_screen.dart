@@ -62,9 +62,10 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
     );
   }
   List<Message>list=[
-    Message(message: "Hello!! How Are You? I am someone", time: "12:00 PM", isMe: false),
-    Message(message: "Hey!! I am Fine :) I am no one", time: "12:00 PM", isMe: true),
-    Message(message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ", time: "12:00 PM", isMe: false),
+    Message(message: "Hello!! How Are You? I am someone. Wanna talk!?", time: "12:00 PM", isMe: false),
+    Message(message: "Hey!! I am Fine :) I am also someone. Yeah! let's share!", time: "12:00 PM", isMe: true),
+    Message(message: "I saw your post and thought you can use some help. So do you wanna talk it out with me. I also went through what you posted but was too afraid to do the same as you. It really helps to know that there are other people like me.", time: "12:01 PM", isMe: false),
+    Message(message: "It's okay I understand. I know it is very difficult to go through this but know that you are not alone. It is specially more tough when you are lonely. If you ever feel alone we can talk. If you like I can help you with this. When I was in this I did that and it really help. You should try that too.", time: "12:02 PM", isMe: true),
   ];
 }
 

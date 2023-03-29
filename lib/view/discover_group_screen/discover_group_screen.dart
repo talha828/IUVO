@@ -133,10 +133,12 @@ class _DiscoverGroupScreenState extends State<DiscoverGroupScreen> {
   List<String> list = [
     "Robbery",
     "Harassment",
-    "Volition",
-    "Injustices",
-    "Murdered",
-    "Defamation "
+    "Violation",
+    "Injustice",
+    "Murder",
+    "Abuse",
+    "Defamation",
+    "PAKISTAN",
   ];
   List<DiscoverGroupModel> element = [
     DiscoverGroupModel(
@@ -146,7 +148,7 @@ class _DiscoverGroupScreenState extends State<DiscoverGroupScreen> {
         image: Assets.imageHarassment,
         groupMember: "41.5K"),
     DiscoverGroupModel(
-        name: "SayNobully",
+        name: "Stop Bullying",
         image: Assets.imageBullied,
         groupMember: "88.5K"),
     DiscoverGroupModel(
@@ -157,6 +159,9 @@ class _DiscoverGroupScreenState extends State<DiscoverGroupScreen> {
         name: "Injustices", image: Assets.imageJustices, groupMember: "33.8K"),
     DiscoverGroupModel(
         name: "Killer Spot", image: Assets.imageMudered, groupMember: "33.8K"),
+    DiscoverGroupModel(
+        name: "Pakistan", image: Assets.imagePakistan, groupMember: "88.5K"
+    ),
   ];
 }
 
