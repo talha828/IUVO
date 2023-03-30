@@ -51,10 +51,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
     var height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
-        body: Stack(
-          children: [
-            SingleChildScrollView(
-              child: Container(
+        body: SingleChildScrollView(
+          child: Stack(
+            children: [
+              Container(
                 padding: EdgeInsets.symmetric(
                     vertical: width * 0.04, horizontal: width * 0.04),
                 child: Column(
@@ -209,11 +209,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ],
                 ),
               ),
-            ),
-            isLoading
-                ? const Positioned.fill(child: LoadingIndicator())
-                : Container()
-          ],
+              isLoading
+                  ? const Positioned.fill(child: LoadingIndicator())
+                  : Container()
+            ],
+          ),
         ),
       ),
     );

@@ -21,9 +21,10 @@ class _SplashScreenState extends State<SplashScreen> {
     String? email = prefs.getString("email");
     String? password = prefs.getString("password");
     if (email.toString() != "null" && password.toString() != "null") {
-      Get.to(const MainScreen());
+      Timer(const Duration(seconds: 4),()=>Get.to(const MainScreen()));
+      //Get.to(const MainScreen());
     } else {
-      Timer(Duration(seconds: 2),()=>Get.to(const ReportYourIssueScreen()));
+      Timer(const Duration(seconds: 4),()=>Get.to(const ReportYourIssueScreen()));
     }
   }
 
@@ -37,6 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
         body: Center(
           child: Image.asset(
             Assets.imageLogo,

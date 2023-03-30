@@ -39,10 +39,10 @@ class _LoginScreenState extends State<LoginScreen> {
     var height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
-        body: Stack(
-          children: [
-            SingleChildScrollView(
-              child: Container(
+        body: SingleChildScrollView(
+          child: Stack(
+            children: [
+              Container(
                 height:height ,
                 padding: EdgeInsets.symmetric(
                     vertical: width * 0.04, horizontal: width * 0.04),
@@ -136,11 +136,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
               ),
-            ),
-            isLoading
-                ? const Positioned.fill(child: LoadingIndicator())
-                : Container()
-          ],
+              isLoading
+                  ? const Positioned.fill(child: LoadingIndicator())
+                  : Container()
+            ],
+          ),
         ),
       ),
     );

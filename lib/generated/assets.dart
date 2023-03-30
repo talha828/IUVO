@@ -2,6 +2,7 @@
 class Assets {
   Assets._();
 
+  static const String assetsImageLogo = 'assets/image/logo.png';
   static const String imageArrow = 'assets/image/arrow.png';
   static const String imageAvater = 'assets/image/avater.png';
   static const String imageBullied = 'assets/image/bullied.jpg';
@@ -15,7 +16,7 @@ class Assets {
   static const String imageHarassment = 'assets/image/harassment.jpg';
   static const String imageJustices = 'assets/image/justices.png';
   static const String imageLogin = 'assets/image/login.png';
-  static const String imageLogo = 'assets/image/logo.png';
+  static const String imageLogo = 'assets/image/logo.gif';
   static const String imageMudered = 'assets/image/mudered.jpg';
   static const String imageMultimedia = 'assets/image/multimedia.png';
   static const String imagePakistan = 'assets/image/pakistan.png';
