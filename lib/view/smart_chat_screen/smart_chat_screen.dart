@@ -62,7 +62,7 @@ class _SmartChatScreenState extends State<SmartChatScreen> {
     );
   }
   List<Message>list=[
-    Message(message: "Hey! Tell me your problem. I will suggest you some good tips.", time: "12:00 PM", isMe: false),
+    Message(message: "Hey there! I am your friendly, helping chatbot. What would you like to know!?", time: "12:00 PM", isMe: false),
   ];
 }
 

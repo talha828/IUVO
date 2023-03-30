@@ -52,14 +52,6 @@ class Auth {
                       margin: EdgeInsets.symmetric(
                           vertical: width * 0.05, horizontal: width * 0.05));
                 });
-              }).catchError((e) {
-                setLoading(false);
-                Get.snackbar("Authentication Failed",
-                    "Something went wrong,please check your internet connection",
-                    duration: const Duration(seconds: 5),
-                    snackPosition: SnackPosition.BOTTOM,
-                    margin: EdgeInsets.symmetric(
-                        vertical: width * 0.05, horizontal: width * 0.05));
               });
             } else {
               Get.snackbar("password not match", "Fill correct password",

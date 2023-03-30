@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
           )
       ),
       home:const  SplashScreen(),
+      debugShowCheckedModeBanner:false,
     );
   }
   MaterialColor createMaterialColor(Color color) {

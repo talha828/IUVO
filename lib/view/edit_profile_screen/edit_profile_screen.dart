@@ -22,7 +22,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: const Icon(Icons.arrow_back_ios_new_outlined),
         ),
         title: const Text('Edit Profile'),
@@ -30,7 +32,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           Container(
             margin: const EdgeInsets.all(10),
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+
+              },
               style: ElevatedButton.styleFrom(
                 primary: Colors.white,
               ),
@@ -69,18 +73,18 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 IuvoTextField(
                     obscureText: false,
                     controller: name,
-                    hintText: "Talha Iqbal",
+                    hintText: "XXXAA DDDDMM",
                     labelText: "Name"),
                 SizedBox(height: width * 0.05,),
                 IuvoTextField(
                     obscureText: false,
-                    controller: name,
-                    hintText: "Talha22",
+                    controller: userName,
+                    hintText: "XXxx.0077",
                     labelText: "Username"),
                 SizedBox(height: width * 0.05,),
                 IuvoTextField(
                     obscureText: false,
-                    controller: name,
+                    controller: country,
                     hintText: "Pakistan",
                     labelText: "Country"),
                 SizedBox(height: width * 0.05,),
